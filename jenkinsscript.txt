@@ -1,0 +1,30 @@
+pipeline {
+    agent {
+        docker {
+            image *timbru31/node-alpine-firefox"
+            args *-u rootroot’
+        }
+    }
+    stages {
+            stage('Build’) {
+                steps {
+                    checkout scaGit (branches: [[name: **/main’]], extensions: [], userRemoteConfigs: [[url: 'https://github.con/hammadkhe/todo-testing'1])
+                    sh *npa install’
+                stage(‘Test') {
+                    steps {
+                        sh ‘npm install paz --location-global’
+                        sh ‘pm start npm -- start’
+                        sh 1s 10
+                        sh “wget https://github.con/mozilla/geckodriver/releases/download/ve.31./geckodriver -ve.31.0- Linuxe. tar.gz"
+                        sh chmod +x geckodriver®
+                        sh ‘mv geckodriver /usr/local/bin/*
+                        Sleep(tine:s, unit: "SECONDS")
+                        sh "paz log --nostrean rpm’
+                        sh "wget —-spider http://localhost:5000"
+                        sh “node test.js'
+                    }
+                }
+            }
+        }
+    }
+}
