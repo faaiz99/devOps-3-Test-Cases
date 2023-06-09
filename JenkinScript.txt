@@ -8,7 +8,7 @@ pipeline {
     stages {
             stage('Build’) {
                 steps {
-                    checkout scaGit (branches: [[name: **/main’]], extensions: [], userRemoteConfigs: [[url: 'https://github.con/hammadkhe/todo-testing'1])
+                    checkout scaGit (branches: [[name: **/main’]], extensions: [], userRemoteConfigs: [[url: 'https://github.com/faaiz99/devOps-3-Test-Cases']])
                     sh *npa install’
                 stage(‘Test') {
                     steps {
